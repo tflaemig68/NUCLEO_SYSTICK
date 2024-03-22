@@ -60,7 +60,7 @@ main-build: NUCLEO_SYSTICK.elf secondary-outputs
 
 # Tool invocations
 NUCLEO_SYSTICK.elf NUCLEO_SYSTICK.map: $(OBJS) $(USER_OBJS) D:\GITHUB\STM32\EDS_2023\NUCLEO_SYSTICK\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NUCLEO_SYSTICK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2023\NUCLEO_SYSTICK\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_SYSTICK.map" -Wl,--gc-sections -static -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug" -L"D:\GITHUB\STM32\EDS_2023\CMSIS\Debug" -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug\Src" -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug\Src\mcalTimer" -L"D:\GITHUB\STM32\EDS_2023\CMSIS\Device\ST\STM32F4xx\Source\Templates" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "NUCLEO_SYSTICK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2023\NUCLEO_SYSTICK\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_SYSTICK.map" -Wl,--gc-sections -static -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug" -L"D:\GITHUB\STM32\EDS_2023\CMSIS\Debug" -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug\Src" -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug\Src\mcalTimer" -L"D:\GITHUB\STM32\EDS_2023\CMSIS\Device\ST\STM32F4xx\Source\Templates" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

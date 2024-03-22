@@ -7,9 +7,9 @@
  * SYSTICKUpdateTimerList()) eingefuehrt wird.
  */
 
-#include <stm32f4xx.h>
-#include <system_stm32f4xx.h>
-#include <stm32f401xe.h>
+//#include <stm32f4xx.h>
+//#include <system_stm32f4xx.h>
+//#include <stm32f401xe.h>
 
 #include <stdint.h>
 #include <stdbool.h>
